@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fieldflow — HVAC job management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="login.css"><link rel="stylesheet" href="auth.css"><link rel="stylesheet" href="profile.css"><link rel="stylesheet" href="profile-button.css"><link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+<section class="login-screen" id="loginScreen">
+  <div class="login-story">
+    <a class="brand login-brand" href="#"><span class="brand-icon">f</span><span>fieldflow<span class="brand-dot">.</span></span></a>
+    <div class="story-content"><span class="story-kicker"><i></i> MADE FOR THE PEOPLE WHO KEEP US COMFORTABLE</span><h1>Less chasing.<br><em>More doing.</em></h1><p>From the first quote to the final payment, keep your service business moving.</p>
+      <div class="story-flow"><div><span>01</span><strong>Send a quote</strong></div><b>→</b><div><span>02</span><strong>Book the job</strong></div><b>→</b><div><span>03</span><strong>Get paid</strong></div></div>
+    </div><div class="story-footer"><span>FIELD SERVICE, IN GOOD HANDS.</span><span>© 2026 Fieldflow</span></div>
+  </div>
+  <div class="login-side"><div class="login-mobile-brand"><span class="brand-icon">f</span><span>fieldflow<span class="brand-dot">.</span></span></div><div class="login-box"><div class="login-heading"><div class="eyebrow">WELCOME BACK</div><h2>Sign in to your account</h2><p>Pick up right where you left off.</p></div>
+    <form id="loginForm"><label class="login-label" for="loginEmail">Email address</label><div class="login-input-wrap"><span>✉</span><input id="loginEmail" type="email" placeholder="you@yourbusiness.com" value="mike@airhouse.com" required autocomplete="username"></div>
+      <div class="login-password-label"><label class="login-label" for="loginPassword">Password</label><button type="button" class="forgot-link" id="forgotBtn">Forgot password?</button></div><div class="login-input-wrap"><span>⌑</span><input id="loginPassword" type="password" value="fieldflowdemo" required autocomplete="current-password"><button class="password-toggle" id="passwordToggle" type="button">Show</button></div>
+      <label class="remember-row"><input type="checkbox" checked> <span>Keep me signed in</span></label><button class="primary login-submit" type="submit">Sign in <span>→</span></button>
+    </form><div class="login-divider"><span></span>OR<span></span></div><button class="demo-signin" id="demoSignIn"><span class="demo-avatar">AH</span><span><strong>Explore the demo workspace</strong><small>AirHouse Heating · Sample account</small></span><b>→</b></button><p class="signup-line">New to Fieldflow? <button id="signupBtn">Create an account</button></p><div class="login-legal">By continuing, you agree to our <a href="#" id="termsLink">Terms</a> and <a href="#" id="privacyLink">Privacy Policy</a>.</div>
+  </div><div class="login-help">Need help? <a href="#" id="loginHelp">Contact support</a></div></div>
+</section>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#dashboard"><span class="brand-icon">f</span><span>fieldflow<span class="brand-dot">.</span></span></a>
+    <div class="workspace"><div class="workspace-icon">AH</div><div><strong>AirHouse Heating</strong><small>HVAC workspace</small></div><span class="chevron">⌄</span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard"><span class="nav-icon">▦</span>Overview</button>
+      <button class="nav-item" data-page="jobs"><span class="nav-icon">▣</span>Jobs <span class="nav-count">8</span></button>
+      <button class="nav-item" data-page="quotes"><span class="nav-icon">▤</span>Quotes <span class="nav-count amber">5</span></button>
+      <button class="nav-item" data-page="customers"><span class="nav-icon">♙</span>Customers</button>
+      <button class="nav-item" data-page="invoices"><span class="nav-icon">▧</span>Invoices <span class="nav-count">3</span></button>
+      <button class="nav-item" data-page="calendar"><span class="nav-icon">▦</span>Schedule</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="nav-label">PREFERENCES</div><button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button><div class="help-card"><span class="help-icon">✳</span><strong>Need a hand?</strong><p>Our team is here to help you get set up.</p><button id="helpBtn">Visit help center <span>↗</span></button></div><button class="profile" data-page="profile" aria-label="Open user profile"><div class="avatar" id="sidebarAvatar">MC</div><div><strong id="sidebarName">Mike Carter</strong><small id="sidebarRole">Owner</small></div><span class="chevron">•••</span></button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="breadcrumb"><span>AirHouse Heating</span><b>/</b><strong id="crumb">Overview</strong></div><div class="top-actions"><button class="icon-button" title="Search" id="searchBtn">⌕</button><button class="icon-button notification" title="Notifications" id="notifyBtn">♧<i></i></button><button class="top-avatar" data-page="profile" aria-label="Open user profile">MC</button></div></header>
+    <div id="page" class="page"></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal" id="modal"></section></div>
+<script src="app.js"></script><script src="login.js"></script><script src="profile.js"></script><script src="schedule-polish.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+const loginScreen=document.getElementById('loginScreen');
+const appShell=document.querySelector('.app-shell');
+function enterDemo(){loginScreen.hidden=true;appShell.classList.add('unlocked');document.body.style.background='var(--canvas)';}
+document.getElementById('loginForm').addEventListener('submit',event=>{event.preventDefault();const email=document.getElementById('loginEmail');if(!email.checkValidity()){email.reportValidity();return}enterDemo();});
+document.getElementById('demoSignIn').addEventListener('click',enterDemo);
+document.getElementById('passwordToggle').addEventListener('click',event=>{const field=document.getElementById('loginPassword');const visible=field.type==='password';field.type=visible?'text':'password';event.currentTarget.textContent=visible?'Hide':'Show';});
+document.getElementById('forgotBtn').addEventListener('click',()=>{const email=document.getElementById('loginEmail').value;const toast=document.getElementById('toast');toast.textContent=email?`Password reset link sent to ${email}`:'Enter your email address first';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)});
+document.getElementById('signupBtn').addEventListener('click',()=>{const toast=document.getElementById('toast');toast.textContent='Account setup is ready for your new business';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)});
+document.getElementById('loginHelp').addEventListener('click',event=>{event.preventDefault();const toast=document.getElementById('toast');toast.textContent='Contact AirHouse support at (415) 555-0140';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)});
+for(const id of ['termsLink','privacyLink'])document.getElementById(id).addEventListener('click',event=>{event.preventDefault();const toast=document.getElementById('toast');toast.textContent='This demo does not include a published legal page';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)});
