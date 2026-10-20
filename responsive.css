@@ -1,0 +1,34 @@
+/* Small-screen application layout */
+@media(max-width:760px){
+  .sidebar{position:fixed;inset:auto 0 0;width:100%;height:68px;padding:5px 4px calc(5px + env(safe-area-inset-bottom));border:0;border-top:1px solid var(--line);box-shadow:0 -5px 18px #142e240c;display:block;background:#fff}
+  .sidebar>.brand,.sidebar>.workspace,.sidebar>.nav-label,.sidebar>.sidebar-bottom{display:none}
+  .sidebar nav{height:100%;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:stretch;gap:1px}
+  .sidebar nav .nav-item{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-width:0;height:100%;margin:0;padding:4px 1px;border-radius:7px;color:#78827e;font-size:8px;line-height:1.1;white-space:nowrap}
+  .sidebar nav .nav-item.active{background:#eaf4ef;color:#176e55}
+  .sidebar nav .nav-item .nav-icon{font-size:17px;line-height:19px;width:auto}
+  .sidebar nav .nav-item .nav-count{display:none}
+  .main{margin-left:0;min-height:100vh;padding-bottom:calc(78px + env(safe-area-inset-bottom));min-width:0}
+  .topbar{height:54px;padding:0 15px}
+  .breadcrumb{gap:7px;font-size:10px;min-width:0}.breadcrumb span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:45vw}
+  .top-actions{gap:7px}.icon-button{width:29px;height:29px}.top-avatar{width:28px;height:28px}
+  .page{width:100%;padding:22px 15px 20px;min-width:0}
+  .heading-row{align-items:center;margin-bottom:19px;gap:10px}.heading-row>div{min-width:0}.eyebrow{font-size:8px}h1{font-size:22px;line-height:1.2}.subhead{font-size:10px;line-height:1.5}.heading-row .primary{flex:none;padding:9px 10px;font-size:9px}.heading-row .primary .plus{font-size:13px;margin-right:3px}
+  .stats{gap:9px;margin-bottom:14px}.stat-card{padding:12px}.stat-num{font-size:21px;margin:8px 0 5px}.stat-top{font-size:9px}.stat-icon{width:24px;height:24px}.stat-foot{font-size:8px}
+  .dashboard-grid{grid-template-columns:minmax(0,1fr);gap:0}.panel{padding:14px;margin-bottom:11px;min-width:0;overflow-x:auto}.panel-head{min-width:max-content;margin-bottom:12px}.panel-head h2{font-size:13px}.panel-head p{font-size:9px}.panel .table{min-width:560px}
+  .content-card{padding:13px;min-width:0;overflow-x:auto}.table-tools{gap:7px}.search-input{width:min(210px,58vw)}.filter-select{max-width:145px}.full-table{min-width:590px}
+  .customer-list{grid-template-columns:1fr;gap:9px}.customer-card{padding:12px}.customer-meta{margin-top:10px;padding-top:9px}
+  .quote-layout{grid-template-columns:minmax(0,1fr)}.quote-preview{padding:16px}
+  .settings-grid{grid-template-columns:minmax(0,1fr)}.settings-menu{display:flex;overflow:auto;gap:4px;white-space:nowrap}.settings-tab{width:auto;flex:none;padding:9px}
+  .modal-backdrop{align-items:flex-end;padding:0}.modal{width:100%;max-height:88dvh;overflow:auto;border-radius:14px 14px 0 0;padding:20px 17px calc(18px + env(safe-area-inset-bottom))}
+  .form-grid{gap:10px}.field input,.field select,.field textarea{font-size:16px;min-height:42px}
+  .toast{bottom:calc(79px + env(safe-area-inset-bottom));max-width:calc(100vw - 28px);text-align:center}
+  .profile-columns{grid-template-columns:minmax(0,1fr)}.profile-panel{padding:15px}.profile-hero{padding:15px;gap:12px}
+  .schedule-summary{padding:11px;gap:9px}.schedule-summary-item{min-width:calc(50% - 6px)}.schedule-summary-item small{font-size:8px}.schedule-summary-spacer{display:none}.schedule-today{margin-left:auto;padding:7px 10px}.schedule-toolbar{gap:8px}.schedule-toolbar h2{font-size:12px}.schedule-toolbar p{font-size:8px}.schedule-controls{gap:5px}.schedule-arrow{width:28px;height:28px}.calendar-scroll{margin:0 -1px}.upcoming-card{padding:14px}
+  .portal-card{padding:18px}
+}
+@media(max-width:390px){
+  .sidebar{height:64px}.sidebar nav .nav-item{font-size:7px}.sidebar nav .nav-item .nav-icon{font-size:16px}
+  .page{padding-left:11px;padding-right:11px}.heading-row{align-items:flex-start}.heading-row h1{font-size:20px}.heading-row .primary{padding:8px;font-size:8px}
+  .stats{gap:7px}.stat-card{padding:10px}.stat-num{font-size:19px}.stat-foot{font-size:7px}.topbar{padding:0 11px}
+  .schedule-summary-item{min-width:calc(50% - 5px)}.schedule-toolbar{align-items:flex-start}.schedule-toolbar p{max-width:150px}.schedule-add{display:none}
+}
